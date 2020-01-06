@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test JQ</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('#btn').click(function(){
+            //     alert('hi');
+            // });
+
+            $('input[type="button"]').click(function(){
+                var data = $($($(this).parent().parent().children()[1]).children()[0]).val();
+                alert('hi ' + data);
+                
+                debugger;
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <!-- <input type="button" id="btn" value="Click Me">
+    <br> -->
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>
+                <input type="text" id="txtNo">    
+            </td>
+
+            <td>
+                <input type="button" id="btn" value="Click Me">    
+            </td>
+           
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <input type="text" id="txtName">    
+            </td>
+            <td>
+                <input type="button" id="btn" value="Click Me">    
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+

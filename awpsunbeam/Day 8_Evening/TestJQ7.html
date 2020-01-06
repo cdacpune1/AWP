@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="jquery-3.3.1.min.js"></script> -->
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        var counter = 0;
+
+        $(document).ready(function(){
+            debugger;
+
+            $('#btn').click(function(){
+                counter = counter + 1;
+                var myRow = '<tr><td>' + counter + '</td><td><input type="text" id="txtName"><input type="text" id="txtAddress"></td><td><input type="button" id="btnDynamic" value="Click Me" ></td></tr>';
+                $('#myTab').append(myRow);
+
+            });
+
+            $('#btnDynamic').live('click',function(){
+                // var name = $($($(this).parent().parent().children()[1]).children()[0]).val();
+                // var address = $($($(this).parent().parent().children()[1]).children()[1]).val();
+                // alert('Hi ' + name + " from "  + address);
+
+                $(this).parent().parent().remove();
+            });
+
+            // $('input[type="button"]').click(function(){
+            //     alert('Hi');
+            // });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="Add">
+    <br>
+    <table id="myTab" border="1" style="height: 300px; width: 300px">
+        
+    </table>
+</body>
+</html>
+
+
+
+

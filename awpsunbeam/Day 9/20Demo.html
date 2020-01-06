@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test JSON</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>    
+    function myfunction   (){
+        // var someData = 
+        //      {"No": 1, "Name": "Mrunal", "Address": "Chandrapur" };
+        //alert("hi" + someData.Name);
+
+        if(typeof(JSON) == "object")
+        {
+            var someData = 
+            [
+                {"No": 11, "Name": "Mrunal", "Address": "Chandrapur" },
+                {"No": 12, "Name": "Sidhee", "Address": "Kolhapur" },
+                {"No": 13, "Name": "Lalit", "Address": "Nasik" },
+                {"No": 14, "Name": "Pulkit", "Address": "Delhi" }
+            ]
+
+            // for (index = 0; index < someData.length; index++) 
+            // {
+            // alert("Hi " + someData[index].Name); 
+            // }
+
+            for (index = 0; index < someData.length; index++) 
+            {
+                var row= "<tr><td>" + 
+                            someData[index].No + 
+                          "</td><td>"+ 
+                            someData[index].Name+ 
+                          "</td><td>" + 
+                            someData[index].Address + 
+                          "</td></tr>";
+                $('#myTable').append(row);
+                  
+            }
+     
+        }
+        else
+        {
+            alert('Pls upgrade');
+        }
+       
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Me" onclick="myfunction()">
+    <br>
+    <table id="myTable" style="height:500px; width:500px" border="1">
+        
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+

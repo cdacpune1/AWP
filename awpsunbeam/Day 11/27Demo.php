@@ -1,0 +1,16 @@
+<?php 
+
+    header("Content-Type: application/json");
+
+    echo '[
+        {"No": 11, "Name": "Mrunal", "Address": "Chandrapur" },
+        {"No": 12, "Name": "Sidhee", "Address": "Kolhapur" },
+        {"No": 13, "Name": "Lalit", "Address": "Nasik" },
+        {"No": 14, "Name": "Pulkit", "Address": "Delhi" },
+        {"No": 15, "Name": "ABC", "Address": "Nasik" },
+        {"No": 16, "Name": "PQR", "Address": "Nasik" }
+    ]';
+
+
+  //  echo "Kuch to";
+?>

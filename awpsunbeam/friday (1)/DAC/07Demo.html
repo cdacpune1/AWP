@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Javascript</title>
+    <script>
+          function  f1()
+          {
+            
+            // var x = 10;
+            // var y = 20;
+            // var z = x+y;
+
+            debugger;
+            var refToXTextBox = 
+                document.getElementById("txtX");
+            var refToYTextBox = 
+                document.getElementById("txtY");
+            var refTodivSum = 
+                document.getElementById("divSum");
+
+            var x = refToXTextBox.value;
+            var y = refToYTextBox.value;
+
+            if(x == "")  
+            {
+                refTodivSum.innerText = "X is required.";
+            }
+            else {
+                refTodivSum.innerText ="";
+                var z = parseInt(x) + parseInt(y);
+                refTodivSum.innerText = z;
+            }
+
+          }
+
+    </script>
+</head>
+<body>
+        X:<input type="text" value="" id="txtX"><br/>
+        Y:<input type="text" value="" id="txtY"><br/>
+        Sum:<div id="divSum"></div><br/>
+
+        <!-- Sum:<input type="text" value="" id="txtSum"><br/> -->
+        <input type="button" value="Do Something" onclick="f1()"> 
+    <!-- ENter Your Name:<input type="text" value="Mahesh" id="txtName"  name="fname"><br/> -->
+    <!-- <input type="button" value="Register" onclick="f1()"> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

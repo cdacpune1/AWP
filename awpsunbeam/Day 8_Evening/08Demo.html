@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Test Table</title>
+        <script>    
+            function Validate()
+            {
+                ValidateName();
+                ValidateAge();
+
+            }
+
+            function ValidateName()
+            {
+               var fnameControl =   document.getElementById("fname");
+               var errDivForNameControl =   document.getElementById("errDivForName");
+
+                if(fnameControl.value=="")
+                {
+                    errDivForNameControl.innerText = "Name can not be blank.";
+                }
+                else
+                {
+                    errDivForNameControl.innerText = "";
+                }
+
+            }
+
+
+             function ValidateAge()
+            {
+               var ageControl =   document.getElementById("age");
+               var errDivForAgeControl =   document.getElementById("errDivForAge");
+
+                if(ageControl.value=="")
+                {
+                    errDivForAgeControl.innerText = "Age can not be blank.";
+                }
+                else
+                {
+                    errDivForAgeControl.innerText = "";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+      <form method="GET" action="Something.php">
+        <table style="height: 100%; width: 100%; border: black;" border="1">
+            <tr>
+                <td style="width: 130px">Enter Your Name:</td>
+                <td style="width: 130px">
+                    <input name="fname" id="fname" type="text"></td>
+                <td>
+                    <div id="errDivForName" style="color: red"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Your Age:</td>
+                <td><input name="age" id="age" type="text"></td>
+                <td>
+                    <div id="errDivForAge" style="color: red"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Your EMail:</td>
+                <td><input name="email" id="email" type="text"></td>
+                <td>
+                    <div id="errDivForEMail" style="color: red"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Your Address:</td>
+                <td><input name="address" id="address" type="text"></td>
+                <td>
+                    <div id="errDivForAddress" style="color: red"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Your Password:</td>
+                <td><input name="pwd" id="pwd" type="Password"></td>
+                <td>
+                    <div id="errDivForPwd" style="color: red"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Confirm Your Password:</td>
+                <td><input name="cpwd" id="cpwd" type="Password"></td>
+                <td>
+                    <div id="errDivForCpwd" style="color: red"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <center>
+                            <!-- <input name="btnSubmit" type="Submit"> -->
+                            
+                             <input value="Register" id="btnSubmit" name="btnSubmit" onclick="Validate()" type="button">
+                    </center>
+                </td>
+            </tr>
+
+        </table>
+    
+      </form>  
+    </body>
+    </html>

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <script>
+        function myfunction()
+        {
+            var divControl = document.getElementsById("mydiv");
+            divControl.innertext = "Hi";
+        }
+    </script>
+</head>
+<body>
+    <p>This page should simply put "Hi" in the below DIV directly using Javascript when page is shown in the UI using button click!</p>
+    <div id="mydiv"></div>
+    <input type="button" name="btn" id="btn" value="Do Something" onclick="myfunction()" />
+</body>
+</html>

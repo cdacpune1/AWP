@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test JSON</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>    
+    function myfunction   (){
+
+        if(typeof(JSON) == "object")
+        {
+            $.ajax({
+                url: '/MyData.json',
+                type: 'GET',
+                contentType: 'application/json',
+                success: function(someData)
+                                {
+                                    $('#myTable').children().remove();
+                                    for (index = 0; index < someData.length; index++) 
+                                        {
+                                            var row= "<tr><td>" + 
+                                                        someData[index].No + 
+                                                    "</td><td>"+ 
+                                                        someData[index].Name+ 
+                                                    "</td><td>" + 
+                                                        someData[index].Address + 
+                                                    "</td></tr>";
+                                            $('#myTable').append(row);
+                                            
+                                        }
+                                },
+                error: function(err)
+                                {
+                                   debugger;
+                                   alert('Something went Wrong!'); 
+                                }
+            });
+
+        }
+        else
+        {
+            alert('Pls upgrade');
+        }
+       
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Me" onclick="myfunction()">
+    <br>
+    <table id="myTable" style="height:500px; width:500px" border="1">
+        
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+

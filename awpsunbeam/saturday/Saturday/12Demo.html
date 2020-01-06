@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Position</title>
+    <script>
+        var counter = 0;
+        var refToCounter;
+
+        function Start()
+        {
+            refToCounter = window.setInterval("Count()", 1000);
+        }
+
+        function Stop()
+        {
+            window.clearInterval(refToCounter);
+        }
+
+        function  Count()
+        {
+            counter = counter + 1;
+            var element= document.getElementById("myDiv1");
+            element.innerText = counter;
+            if  (counter == 10)
+            {
+                window.clearInterval(refToCounter);
+            }
+
+        }
+    </script> 
+</head>
+<body>
+    <input type="button" id="btnMove" value="Start" onclick="Start()">
+    <input type="button" id="btnMove" value="Stop" onclick="Stop()">
+    <div style="height: 200px; width:200px; background-color: orange" id="myDiv1"></div>
+
+</body>
+</html>

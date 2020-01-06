@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Students SYSTEM "/home/osboxes/Desktop/DAC/Students.dtd">
+<Students>
+  <Student>
+   <No>1</No>  
+   <Name>Lalit</Name>
+   <Address>Pune</Address>
+  </Student>
+  <Student>
+   <No>2</No>  
+   <Name>Jatin</Name>
+  <Address>Chennai</Address>
+  
+  </Student>
+</Students>

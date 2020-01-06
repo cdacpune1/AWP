@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Position</title>
+    <script>
+        var counter = 0;
+           
+
+        function  StartMoving()
+        {
+            debugger;
+           for (i = 0; i < 10; i++)
+           {
+            var myDiv = document.getElementById("myDiv1");
+            counter = counter + 10;
+
+            myDiv.style.left = counter + "px";
+               
+           }  
+        }
+        // function  StartMoving()
+        // {
+        //     debugger;
+        //     var myDiv = document.getElementById("myDiv1");
+        //     counter = counter + 10;
+
+        //     myDiv.style.left = counter + "px";
+        // }
+    </script> 
+</head>
+<body>
+    <div style="height: 200px; width:200px; position:absolute;left:0px; top: 0px; background-color: green" id="myDiv1"></div>
+    <br>    <br>    <br>    <br>    <br>    <br>    <br>   
+    <br>    <br>    <br>    <br>    <br>    <br>    <br>    
+    <input type="button" id="btnMove" value="Start" onclick="StartMoving()">
+    <!-- <div style="height: 200px; width:200px; background-color: orange" id="myDiv2"></div> -->
+
+</body>
+</html>

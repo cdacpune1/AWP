@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test JQ</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>    
+
+        $(document).ready(function(){
+            // $('#btn').click(function(){
+            //     $('#myDiv1').css('background-color','orange');
+            // });
+
+            // $('#myDiv1').click(function(){
+            //     $('#myDiv1').css('background-color','orange');
+            // });
+
+            //$('#btn').click(function(){
+                // var arr= document.getElementsByTagName('div');
+                // for(i=0; i < arr.length; i++) 
+                // {
+                //     arr[i].style.backgroundColor = "orange";
+                //     arr[i].style.height = "50px";
+                //     arr[i].style.width = "300px";
+                // }
+
+                // $('div').css('background-color','orange');
+                // $('div').css('height','50px');
+                // $('div').css('width','300px');
+
+                //$('div').css('background-color','orange').css('height','50px').css('width','300px');
+
+            //     $('div').css({
+            //          'background-color':'orange',
+            //          'height':'50px',
+            //          'width':'300px'});
+            // });
+
+            // $('div').click(function(){
+            //     $(this).css(
+            //         {
+            //          'background-color':'orange',
+            //          'height':'50px',
+            //          'width':'300px'
+            //         });});
+            //     });
+
+            $('div').mouseover(function(){
+                $(this).css(
+                    {
+                     'background-color':'orange',
+                    });});
+
+            $('div').mouseout(function(){
+                $(this).css(
+                    {
+                     'background-color':'yellow',
+                    });});
+
+            $('div').click(function(){
+                $(this).css(
+                    {
+                     'background-color':'green',
+                    });
+                    $(this).unbind('mouseover mouseout');
+
+                    alert($(this).html());
+                });
+               
+
+            $('#btnBind').click(function(){
+                $('#myDiv1').bind('mouseover',function(){
+                                                        $('#myDiv1').css(
+                                                            {
+                                                                'background-color':'orange',
+                                                            });
+                                                        });
+ 
+            });
+
+            $('#btnReset').click(function(){
+                window.location.href = "TestJQ2.html";
+                var randomNo = Math.random();
+
+                f1(randomNo);
+            });
+        });
+
+
+        function f1(r)
+        {
+            alert(r);
+        }
+
+    </script>
+</head>
+<body>
+        <input type="button" value="Refresh" id="btnReset">
+    <input type="button" value="Bind Again" id="btnBind">
+    <input type="button" value="Click Me" id="btn">
+    <br/>
+    <div id="myDiv1" style="height: 100px; width: 100px; background-color: yellow ">
+        1
+    </div>
+    <br/>
+    <div id="myDiv2" style="height: 100px; width: 100px; background-color: yellow ">
+    2     
+    </div>
+    <br/>
+    <div id="myDiv3" style="height: 100px; width: 100px; background-color: yellow ">
+        3
+    </div>
+    <br/>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <script>
+        function myfunction()
+        {
+            var txtControl = document.getElementsById("txtX");
+            var mydiv = document.getElementsById("mydiv");
+            if (txtControl.Value="") {
+                mydiv.Value = "Its Empty";
+            }
+            else {
+                mydiv.Value = "It is not empty!";
+            }
+        }
+    </script>
+</head>
+<body>
+    Check if the next box is empty: <input type="text" id="txtX " value=" " />
+    <div id="mydiv ">Show result here in this div</div>
+    <input type="button" name="btn" id="btn " value="Do Something" onclick="myfunction" />
+</body>
+</html>

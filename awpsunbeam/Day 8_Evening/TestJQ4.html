@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test JQ</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <style>
+        .Jitu{
+            height: 30px; 
+            width: 100px; 
+            background-color: yellow;
+        }
+        .Nitu{
+            height: 30px; 
+            width: 100px; 
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+        var allFilteredDivs = null;
+        
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                //$('#myDiv3').css('background-color', 'orange');
+
+                // $('div').css('background-color', 'orange');
+
+                // $('.Jitu').css('background-color', 'orange');
+
+                //$('div.Jitu').css('background-color', 'orange');
+
+                //$('div[title="nagpur"]').css('background-color', 'orange');
+
+                // $('div[title^="n"]').css('background-color', 'orange');
+
+                 //$('div[title$="k"]').css('background-color', 'orange');
+
+                //  $('div[title*="n"]').css('background-color', 'orange');
+
+                //$('div[title*="n"]').filter('div[title$="k"]').css('background-color', 'orange');
+                allFilteredDivs = $('div[title*="n"]').filter('div[title$="k"]');
+                debugger;
+
+            });
+        });
+    </script>    
+</head>
+<body>
+    <div id="myDiv1" class="Jitu" title="nagpur" >ABC</div>
+    <br>
+    <div id="myDiv2" class="Jitu" title="nasik">PQR</div>
+    <br>
+    <div id="myDiv3" class="Nitu" title="mumbai">XYZ</div>
+    <br>
+    <div id="myDiv4" class="Jitu" title="gangtok">UVW</div>
+    <br>
+    <input type="text" class="Jitu" id="txtName" value="Kuch Bhi">
+    <br>
+    <input type="button" id="btn" value="Click Me">
+</body>
+</html>

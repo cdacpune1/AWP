@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test UI</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>    
+
+    
+    $(document).ready(function(){
+
+        $('#cmbCountry').change(function(){
+            debugger;
+            alert($(this).val());
+        });
+
+        $('#btnShow').click(function(){
+            alert($('input[name="radioGender"]:checked').val());
+            //alert($('#cmbCountry').val());
+            //alert($('#cmbInt').val());
+            // $('input[name="radioGender"]').each(function(){
+            //     alert($(this).attr('checked'))
+            // });   
+
+            //    var arr= document.getElementsByName("radioGender");
+            //    for(i = 0; i < arr.length; i++)  
+            //    {
+            //        var currentElement = arr[i];
+            //        if(currentElement.checked)
+            //        {
+            //            alert(currentElement.value)
+            //        }
+            //    }
+
+        });
+    });
+    
+    </script>
+</head>
+<body>
+
+    <br>
+    <input type="button" id="btnShow" value="See Selected">
+    <br>    
+        <input type="radio" name="radioGender"  value="M">Male
+        <input type="radio" name="radioGender"  value="F">Female
+    <br>    
+    Country: <select name="cmbCountry" id="cmbCountry">
+                <option value="1">India</option>
+                <option value="2">UK</option>
+                <option value="3">USA</option>
+             </select><br>
+    Liking: <select name="cmbInt" id="cmbInt" multiple="multiple">
+        <option value="1">Read</option>
+        <option value="2">Sing</option>
+        <option value="3">Dance</option>
+        <option value="4">Cook</option>
+        </select>
+</body>
+</html>
